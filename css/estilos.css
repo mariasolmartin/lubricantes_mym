@@ -1,0 +1,343 @@
+/*FUENTES*/
+@import url('https://fonts.googleapis.com/css2? family= Heebo:wght@300 & family= Orbitron & display=swap');
+@font-face{
+    font-family: "bebasneue-regular", sans-serif;
+    src: url("../fuentes/BebasNeue-Regular.ttf");
+}
+
+
+/*Selector universal*/
+#{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin-left: 100px;
+    font-family: 'bebasneue-regular', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+
+}
+section{
+    margin-left: 40px;
+}
+section article{
+    background-color: black;
+    width: 1200px;
+    height: 500px;
+}
+section article p{
+    font-size: 25px;
+}
+
+
+
+html{
+    background-color: black;
+}
+#bordes-header{
+    border: 5px solid orange
+}
+.links-style{
+    font-family: 'Heebo', sans-serif;
+    color: white;
+}
+/*Selectores*/
+/*Selectores de etiqueta*/
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: orange;
+    text-align: center;
+}
+.logo-img{
+    width: 200px;
+    margin-top: 1px; 
+}
+
+/*Selector de clase*/
+
+.links-clientes{
+    font-size: 20px;
+    color: orange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.links-style{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+}
+.img-filtro{
+    width: 400px;
+}
+
+/*Selector ID*/
+
+#estilos-footer{
+    background-color: aqua;
+    width: 100%;
+    height: 80px;
+    border: 1px solid royalblue
+}
+#estilos-footer p{
+    background-color: aqua;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder 1px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+#main-clientes{
+    width: 100%;
+    background-image: url("../recursos/imagenes/cambio\ de\ aceite.jpg");
+    background-size: cover;
+    border: 1px solid salmon;
+    height: 800px;
+}
+/*Herencia*/
+p{
+    color:orange
+}
+/*Background-image*/
+.back-productos{
+    height: 900px;
+    width: 100%;
+/*Background-image*/
+background-image: url(../recursos/imagenes/cambio\ de\ aceite\ 2.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+/*box-modeling*/
+.box-modeling{
+    border: 5px solid black;
+}
+h5{
+    border: 2PX solid black;
+}
+
+/*Comentario css*/
+/*Flexbox*/
+.flex-container{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 10px;
+    margin: 10px;
+    height: 650px;
+
+
+    /*Propiedades de la caja*/
+    /*Activamos flexbox*/ 
+    display: flex;
+    /*Definimos eje principal , si es una fila o una columna*/
+    flex-direction: row;
+    /*Defino el desborde*/
+    flex-wrap: wrap;
+    /*Alineamos los elementos en el eje principal*/
+    justify-content: flex-start;
+    /*Alineamos los elementos en el eje secundario*/
+    align-items: flex-start;
+    /*Espacio entre lineas*/
+    align-content: center;
+}
+
+.caja{
+    width: 120px;
+    height: 120px;
+    border:1px solid black;
+    margin: 5px;
+    
+    /*Tipografias*/
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: "bebasneue-regular", sans-serif;
+}
+
+/*Propiedades de los flex items*/
+.c1{
+    background-color: orange;
+    order: 3;
+    flex-grow: 3;
+}
+.c2{
+    background-color: aqua;
+    order: 1;
+    /*Derecho a crecer*/
+    flex-grow: 5;
+}
+.c3{
+    background-color: blueviolet;
+    order: 2;
+}
+
+/*CSS GRIDS Practica*/
+.grid-container{
+    /*Box modeling*/
+    width: 90%;
+    max-width: 1000px;
+    border: 1px solid black;
+    margin: auto;
+    height: 900px;
+    
+    /*Tipografia*/
+    font-size: 50px;
+    text-align: center;
+
+    /*Activar GRIDS*/
+    display: grid;
+    /*Definimos la cantidad de columnas y su ancho widht*/
+    grid-template-columns:  35% 30% 35%;
+    /*Definimos la cantidad de filas y su alto height*/
+    grid-template-rows: repeat(4,1fr);
+    /*Lineas huecas entre columnas*/
+    column-gap: 10px;
+     /*Lineas huecas entre filas*/
+    row-gap: 10px;
+    /*eje horizontal*/
+    justify-items: center;
+    /*eje vertical*/
+    align-items: center;
+}
+
+/*Divs que estan dentro del grid container*/
+.grid-container >div{
+   padding: 20px;
+   color: white;
+   background: orange; 
+}
+
+
+
+/*GRIDS POR AREAS*/
+#grilla{
+    /*activamos grids*/
+    display: grid;
+    grid-template-areas: 
+    "nav  Fecha Distribuidora Vencimiento Pago";
+    grid-template-columns: 10% 30% 30% 30%;
+    grid-template-rows: ;
+}
+
+
+
+
+.border{
+    border: 2px solid black;
+}
+
+section{
+    grid-area: Fecha distribuidora vencimiento pago; 
+    background: orange;
+
+}
+
+/*Responsive*/
+
+main{
+    background-color: black;
+}
+
+nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'bebasneue-regular', sans-serif;;
+}
+
+
+/*Grids areas, Responsive*/
+
+
+/*MediaQueries*/
+@media screen and (max-width: 479px){
+   #grilla{
+    height: 500px;
+    display: grid;
+    grid-template-areas: 
+    "fecha"
+    "distribuidora"
+    "vencimiento"
+    "pago"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,1fr);
+   }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 700px){
+    main{
+        background-color: black;
+    }
+    
+
+    h3{
+        font-size: 60px;
+        font-weight: lighter;
+        font-family:"bebasneue-regular", sans-serif;
+        color: white;
+    }
+
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px){
+    main{
+        background-color: black;
+    }
+    
+
+    h3{
+        font-size: 40px;
+        font-weight: lighter;
+        font-family:"bebasneue-regular", sans-serif;
+        color: white;
+    }
+
+
+}
+
+
+/*Pseudoclases*/
+a:hover{
+    background: orange;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+/*First and lost type*/
+.elementos p:first-of-type{
+    background-color: blue;
+    color: red;
+}
+
+.elementos div:last-of-type{
+    background-color: green;
+    color:white;
+}
+
+/*nth-child y nth-last-child*/
+.listas  :nth-child(odd){
+    background: blue;
+    color:white;
+
+}
