@@ -20,6 +20,7 @@ h1{
     text-align: center;
 
 }
+
 section{
     margin-left: 40px;
 }
@@ -35,6 +36,9 @@ section article p{
 
 
 html{
+    background-color: black;
+}
+nav{
     background-color: black;
 }
 #bordes-header{
@@ -185,12 +189,12 @@ h5{
     /*Box modeling*/
     width: 90%;
     max-width: 1000px;
-    border: 1px solid black;
+    border: 3px solid black;
     margin: auto;
     height: 900px;
     
     /*Tipografia*/
-    font-size: 50px;
+    font-size: 20px;
     text-align: center;
 
     /*Activar GRIDS*/
@@ -212,8 +216,8 @@ h5{
 /*Divs que estan dentro del grid container*/
 .grid-container >div{
    padding: 20px;
-   color: white;
-   background: orange; 
+   color: black;
+   background: white; 
 }
 
 
@@ -336,8 +340,30 @@ a:hover{
 }
 
 /*nth-child y nth-last-child*/
-.listas  :nth-child(odd){
+.listas  :nth-child{
     background: blue;
     color:white;
+    grid-template-columns: 10% 30% 30% 30%;
 
+}
+.col bg-primary{
+    background-color:  orange;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.th scope{
+    width: 25% 25% 25% 25%;
+    color: black;
+    border: 2px;
+    margin: 0%;
+}
+
+
+.btn btn-outline-success{
+    text-align:  10%;
+}
+.table{
+    text-align: center;
+    grid-template-columns: 10% 30% 30% 30%;
 }
