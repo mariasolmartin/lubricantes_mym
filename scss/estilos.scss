@@ -1,0 +1,517 @@
+/*Importacion*/
+@import "fuentes";
+@import "fondos";
+
+
+/*ANIMACIONES*/
+nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(red orange);
+} 
+   
+    .links-style{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /*gradientes*/
+        background-image: linear-gradient(red orange);
+        //background-image: radial-gradient(red orange);
+ }
+
+
+.links-style a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.logo-img{
+    width: 200px;
+    //transform: translate(5px,10px);
+    }
+
+//h1{
+   // animation-name: titulo-mym;
+   // animation-iteration-count: 1;
+   // animation-timing-function: linear;
+   // animation-duration: 2s;
+   // animation-delay: 2s;
+//}
+
+/*animate css*/
+.promo{
+    animation-name: swing;
+    animation-duration: 3s;
+    animation-delay: 2s;
+
+}
+
+
+@keyframes titulo-mym{
+   0%{
+    transform: rotate(0);
+   }
+   100%{
+    transform: rotate(360deg);
+   }
+
+    
+}
+
+.video{
+    width: 700px;
+    height: 500px;
+    transform: translate(400px,-300px);
+}
+
+$relleno:25px;
+$bordes:1px solid black;
+/*Anidacion*/
+
+
+
+header{
+    background-color: rgb(189, 184, 184);
+    
+}
+
+/*Condicional if*/
+$color:blue;
+
+.caja{
+    @if($color blue){
+        background-color: blue;
+    }@else if($color blue){
+        background-color: blue;
+    }
+
+    
+    @else{
+        background-color: aqua;
+    }
+}
+/*creamos nuestro mapa*/
+$estilos:(
+ color: green,
+ centro: center,
+ tfuente: 35px,
+ 1rem: 1rem,
+)
+
+
+/*Ciclo*/;
+@for $i from 1 through 6{
+    .h#{$i}{ //interpolacion
+        font-size: $i * 2rem;   
+    }
+}
+/*BUCLE EACH*/
+$lista1: red blue green pink;
+
+
+
+$redes: ( /*Declaramos nuestro mapa*/
+        twitter: #55acee,
+        facebook:  #3a5795,
+        instagram: #e60b9d
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $red, $color in $redes {
+   .btn--#{$red} {
+       background-color: $color;
+   }
+}
+
+/*EXTEND*/
+.card{
+    background-color: white;
+    border-radius: 4px;
+    padding: $relleno;
+    font-size: 25px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    @extend .card;
+}
+
+/*MIXINS*/
+@mixin crearbordes($colorborde, $size,$shadow){
+    border: 5px solid black ;
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+}
+
+.img{
+    @include crearbordes(red,10px,black);
+}
+/*FUENTES*/
+@import url('https://fonts.googleapis.com/css2? family= Heebo:wght@300 & family= Orbitron & display=swap');
+
+
+@font-face{
+    font-family: "bebasneue-regular", sans-serif;
+    src: url("../fuentes/BebasNeue-Regular.ttf");
+}
+
+/*Selector universal*/
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin-left: 100px;
+    font-family: $font-principal;
+    font-size: 4rem;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+}
+
+
+
+
+section{
+    margin-left: 40px;
+}
+section article{
+    background-color: black;
+    width: 1200px;
+    height: 500px;
+}
+section article p{
+    font-size: 25px;
+}
+
+
+
+html{
+    background-color: black;
+}
+
+#bordes-header{
+    border: 5px solid $color-back
+}
+.links-style{
+    font-family: 'Heebo', sans-serif;
+    color: white;
+}
+/*Selectores*/
+/*Selectores de etiqueta*/
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: map-get($map: $estilos, $key: tfuente);
+    font-weight: bolder;
+    color: map-get($map: $estilos, $key: color);
+    text-align: center;
+}
+.logo-img{
+    width: 200px;
+    margin-top: 1px; 
+}
+/*-
+/*Selector de clase*/
+
+.links-clientes{
+    font-size: 20px;
+    color: orange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.links-style{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+}
+.img-filtro{
+    width: 400px;
+}
+
+/*Selector ID*/
+
+#estilos-footer{
+    background-color: pink;
+    width: 100%;
+    height: 80px;
+    border: 1px solid royalblue
+}
+#estilos-footer p{
+    background-color: rgb(247, 103, 187);
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder 1px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+#main-clientes{
+    width: 100%;
+    background-image: url("../recursos/imagenes/cambio\ de\ aceite.jpg");
+    background-size: cover;
+    border: 1px solid salmon;
+    height: 800px;
+}
+/*Herencia*/
+p{
+    color:orange
+}
+/*Background-image*/
+.back-productos{
+    height: 900px;
+    width: 100%;
+/*Background-image*/
+background-image: url(../recursos/imagenes/cambio\ de\ aceite\ 2.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+/*box-modeling*/
+.box-modeling{
+    border: 5px solid black;
+}
+h5{
+    border: 2PX solid black;
+}
+
+/*Comentario css*/
+/*Flexbox*/
+.flex-container{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 10px;
+    margin: 10px;
+    height: 650px;
+
+
+    /*Propiedades de la caja*/
+    /*Activamos flexbox*/ 
+    display: flex;
+    /*Definimos eje principal , si es una fila o una columna*/
+    flex-direction: row;
+    /*Defino el desborde*/
+    flex-wrap: wrap;
+    /*Alineamos los elementos en el eje principal*/
+    justify-content: flex-start;
+    /*Alineamos los elementos en el eje secundario*/
+    align-items: flex-start;
+    /*Espacio entre lineas*/
+    align-content: center;
+}
+
+.caja{
+    width: 120px;
+    height: 120px;
+    border:1px solid black;
+    margin: 5px;
+    
+    /*Tipografias*/
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: "bebasneue-regular", sans-serif;
+}
+
+/*Propiedades de los flex items*/
+.c1{
+    background-color: orange;
+    order: 3;
+    flex-grow: 3;
+}
+.c2{
+    background-color: aqua;
+    order: 1;
+    /*Derecho a crecer*/
+    flex-grow: 5;
+}
+.c3{
+    background-color: blueviolet;
+    order: 2;
+}
+
+/*CSS GRIDS Practica*/
+.grid-container{
+    /*Box modeling*/
+    width: 90%;
+    max-width: 1000px;
+    border: 3px solid black;
+    margin: auto;
+    height: 900px;
+    
+    /*Tipografia*/
+    font-size: 20px;
+    text-align: center;
+
+    /*Activar GRIDS*/
+    display: grid;
+    /*Definimos la cantidad de columnas y su ancho widht*/
+    grid-template-columns:  35% 30% 35%;
+    /*Definimos la cantidad de filas y su alto height*/
+    grid-template-rows: repeat(4,1fr);
+    /*Lineas huecas entre columnas*/
+    column-gap: 10px;
+     /*Lineas huecas entre filas*/
+    row-gap: 10px;
+    /*eje horizontal*/
+    justify-items: center;
+    /*eje vertical*/
+    align-items: center;
+}
+
+/*Divs que estan dentro del grid container*/
+.grid-container div{
+   padding: 20px;
+   color: black;
+   background: white; 
+}
+
+
+
+/*GRIDS POR AREAS*/
+#grilla{
+    /*activamos grids*/
+    display: grid;
+    grid-template-areas: 
+    "nav  Fecha Distribuidora Vencimiento Pago";
+    grid-template-columns: 10% 30% 30% 30%;
+    grid-template-rows: 2;
+}
+
+
+
+
+.border{
+    border: 2px solid black;
+}
+
+section{
+    grid-area: Fecha distribuidora vencimiento pago; 
+    background: orange;
+
+}
+
+/*Responsive*/
+
+main{
+    background-color: black;
+}
+
+
+a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'bebasneue-regular', sans-serif;;
+}
+
+
+/*Grids areas, Responsive*/
+
+
+/*MediaQueries*/
+@media screen and (max-width: 479px){
+   #grilla{
+    height: 500px;
+    display: grid;
+    grid-template-areas: 
+    "fecha"
+    "distribuidora"
+    "vencimiento"
+    "pago"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,1fr);
+   }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 700px){
+    main{
+        background-color: black;
+    }
+    
+
+    h3{
+        font-size: 60px;
+        font-weight: lighter;
+        font-family:"bebasneue-regular", sans-serif;
+        color: white;
+    }
+
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px){
+    main{
+        background-color: black;
+    }
+    
+
+    h3{
+        font-size: 40px;
+        font-weight: lighter;
+        font-family:"bebasneue-regular", sans-serif;
+        color: white;
+    }
+
+
+}
+
+
+/*Pseudoclases*/
+a:hover{
+    background:black;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+/*First and lost type*/
+.elementos p:first-of-type{
+    background-color: blue;
+    color: red;
+}
+
+.elementos div:last-of-type{
+    background-color: green;
+    color:white;
+}
+
+/*nth-child y nth-last-child*/
+.listas  :nth-child{
+    background: blue;
+    color:white;
+    grid-template-columns: 10% 30% 30% 30%;
+
+}
+.col bg-primary{
+    background-color:  orange;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.th scope{
+    width: 25% 25% 25% 25%;
+    color: black;
+    border: 2px;
+    margin: 0%;
+}
+
+
+.btn btn-outline-success{
+    text-align:  10%;
+}
+.table{
+    text-align: center;
+    grid-template-columns: 10% 30% 30% 30%;
+}
