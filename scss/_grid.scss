@@ -1,0 +1,49 @@
+/*CSS GRIDS Practica*/
+.grid-container{
+    /*Box modeling*/
+    width: 90%;
+    max-width: 1000px;
+    border: 3px solid black;
+    margin: auto;
+    height: 900px;
+    
+    /*Tipografia*/
+    font-size: 20px;
+    text-align: center;
+
+    /*Activar GRIDS*/
+    display: grid;
+    /*Definimos la cantidad de columnas y su ancho widht*/
+    grid-template-columns:  35% 30% 35%;
+    /*Definimos la cantidad de filas y su alto height*/
+    grid-template-rows: repeat(4,1fr);
+    /*Lineas huecas entre columnas*/
+    column-gap: 10px;
+     /*Lineas huecas entre filas*/
+    row-gap: 10px;
+    /*eje horizontal*/
+    justify-items: center;
+    /*eje vertical*/
+    align-items: center;
+}
+
+/*Divs que estan dentro del grid container*/
+.grid-container div{
+   padding: 20px;
+   color: black;
+   background: white; 
+}
+
+
+
+/*GRIDS POR AREAS*/
+#grilla{
+    /*activamos grids*/
+    display: grid;
+    grid-template-areas: 
+    "nav  Fecha Distribuidora Vencimiento Pago";
+    grid-template-columns: 10% 30% 30% 30%;
+    grid-template-rows: 2;
+}
+
+

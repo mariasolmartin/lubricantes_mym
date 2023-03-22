@@ -1,0 +1,53 @@
+/*Flexbox*/
+.flex-container{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 10px;
+    margin: 10px;
+    height: 650px;
+
+
+    /*Propiedades de la caja*/
+    /*Activamos flexbox*/ 
+    display: flex;
+    /*Definimos eje principal , si es una fila o una columna*/
+    flex-direction: row;
+    /*Defino el desborde*/
+    flex-wrap: wrap;
+    /*Alineamos los elementos en el eje principal*/
+    justify-content: flex-start;
+    /*Alineamos los elementos en el eje secundario*/
+    align-items: flex-start;
+    /*Espacio entre lineas*/
+    align-content: center;
+}
+
+.caja{
+    width: 120px;
+    height: 120px;
+    border:1px solid black;
+    margin: 5px;
+    
+    /*Tipografias*/
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: "bebasneue-regular", sans-serif;
+}
+
+/*Propiedades de los flex items*/
+.c1{
+    background-color: orange;
+    order: 3;
+    flex-grow: 3;
+}
+.c2{
+    background-color: aqua;
+    order: 1;
+    /*Derecho a crecer*/
+    flex-grow: 5;
+}
+.c3{
+    background-color: blueviolet;
+    order: 2;
+}
