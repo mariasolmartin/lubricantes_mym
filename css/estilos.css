@@ -2,6 +2,7 @@
 /*ANIMACIONES*/
 @import url("https://fonts.googleapis.com/css2? family= Heebo:wght@300 & family= Orbitron & display=swap");
 nav {
+  background-color: black;
   margin-top: 10px;
   display: flex;
   justify-content: space-around;
@@ -29,21 +30,26 @@ nav {
   width: 200px;
 }
 
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: orangered;
+  text-align: center;
+}
+
+form {
+  text-align: justify;
+}
+
 /*animate css*/
 .promo {
+  background-color: orangered;
+  text-align: center;
   animation-name: swing;
   animation-duration: 3s;
   animation-delay: 2s;
+  animation-timing-function: linear;
 }
 
-@keyframes titulo-mym {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .video {
   width: 700px;
   height: 500px;
@@ -51,6 +57,10 @@ nav {
 }
 
 /*Anidacion*/
+head {
+  background-color: black;
+}
+
 header {
   background-color: rgb(189, 184, 184);
 }
@@ -114,9 +124,10 @@ header {
 
 /*MIXINS*/
 .img {
-  border: 5px solid black;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px black;
+  margin-left: auto;
+  display: inline 25% 25% 25% 25%;
+  width: 300px;
+  height: 300px;
 }
 
 /*FUENTES*/
@@ -158,6 +169,7 @@ html {
 }
 
 .links-style {
+  background-color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: lighter;
@@ -167,23 +179,6 @@ html {
 
 .img-filtro {
   width: 400px;
-}
-
-/*Selector ID*/
-#estilos-footer {
-  background-color: pink;
-  width: 100%;
-  height: 80px;
-  border: 1px solid royalblue;
-}
-
-#estilos-footer p {
-  background-color: rgb(247, 103, 187);
-  color: black;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bolder 1px;
-  text-align: center;
-  font-size: 30px;
 }
 
 #main-clientes {
@@ -196,7 +191,7 @@ html {
 
 /*Herencia*/
 p {
-  color: orange;
+  color: black;
 }
 
 /*Background-image*/
@@ -215,103 +210,6 @@ p {
 }
 
 /*Comentario css*/
-/*Flexbox*/
-.flex-container {
-  border: 1px solid black;
-  background: #ccc;
-  padding: 10px;
-  margin: 10px;
-  height: 650px;
-  /*Propiedades de la caja*/
-  /*Activamos flexbox*/
-  display: flex;
-  /*Definimos eje principal , si es una fila o una columna*/
-  flex-direction: row;
-  /*Defino el desborde*/
-  flex-wrap: wrap;
-  /*Alineamos los elementos en el eje principal*/
-  justify-content: flex-start;
-  /*Alineamos los elementos en el eje secundario*/
-  align-items: flex-start;
-  /*Espacio entre lineas*/
-  align-content: center;
-}
-
-.caja {
-  width: 120px;
-  height: 120px;
-  border: 1px solid black;
-  margin: 5px;
-  /*Tipografias*/
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  font-family: "bebasneue-regular", sans-serif;
-}
-
-/*Propiedades de los flex items*/
-.c1 {
-  background-color: orange;
-  order: 3;
-  flex-grow: 3;
-}
-
-.c2 {
-  background-color: aqua;
-  order: 1;
-  /*Derecho a crecer*/
-  flex-grow: 5;
-}
-
-.c3 {
-  background-color: blueviolet;
-  order: 2;
-}
-
-/*CSS GRIDS Practica*/
-.grid-container {
-  /*Box modeling*/
-  width: 90%;
-  max-width: 1000px;
-  border: 3px solid black;
-  margin: auto;
-  height: 900px;
-  /*Tipografia*/
-  font-size: 20px;
-  text-align: center;
-  /*Activar GRIDS*/
-  display: grid;
-  /*Definimos la cantidad de columnas y su ancho widht*/
-  grid-template-columns: 35% 30% 35%;
-  /*Definimos la cantidad de filas y su alto height*/
-  grid-template-rows: repeat(4, 1fr);
-  /*Lineas huecas entre columnas*/
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-  /*Lineas huecas entre filas*/
-  row-gap: 10px;
-  /*eje horizontal*/
-  justify-items: center;
-  /*eje vertical*/
-  align-items: center;
-}
-
-/*Divs que estan dentro del grid container*/
-.grid-container div {
-  padding: 20px;
-  color: black;
-  background: white;
-}
-
-/*GRIDS POR AREAS*/
-#grilla {
-  /*activamos grids*/
-  display: grid;
-  grid-template-areas: "nav  Fecha Distribuidora Vencimiento Pago";
-  grid-template-columns: 10% 30% 30% 30%;
-  grid-template-rows: 2;
-}
-
 .border {
   border: 2px solid black;
 }
@@ -329,7 +227,6 @@ a {
   font-family: "bebasneue-regular", sans-serif;
 }
 
-/*Grids areas, Responsive*/
 /*Pseudoclases*/
 a:hover {
   background: black;
@@ -362,18 +259,15 @@ a:hover {
   font-weight: bolder;
 }
 
-.th scope {
-  width: 25% 25% 25% 25%;
-  color: black;
-  border: 2px;
-  margin: 0%;
-}
-
-.btn btn-outline-success {
-  text-align: 10%;
-}
-
 .table {
   text-align: center;
   grid-template-columns: 10% 30% 30% 30%;
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+.estilos-footer {
+  background-color: #e60b9d;
+  border: 2px;
+  color: white;
+}
+
+/*# sourceMappingURL=estilos.css.map */

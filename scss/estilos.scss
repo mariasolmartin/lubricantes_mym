@@ -5,6 +5,7 @@
 
 /*ANIMACIONES*/
 nav{
+    background-color: black;
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
@@ -36,33 +37,32 @@ nav{
     //transform: translate(5px,10px);
     }
 
-//h1{
-   // animation-name: titulo-mym;
-   // animation-iteration-count: 1;
-   // animation-timing-function: linear;
-   // animation-duration: 2s;
-   // animation-delay: 2s;
-//}
+h1{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   background-color: orangered;
+   text-align: center;
+}
+
+
+
+form{
+    text-align: justify;
+}
+
+
 
 /*animate css*/
 .promo{
+    background-color: orangered;
+    text-align: center;
     animation-name: swing;
     animation-duration: 3s;
     animation-delay: 2s;
+    animation-timing-function: linear ;
 
 }
+ 
 
-
-@keyframes titulo-mym{
-   0%{
-    transform: rotate(0);
-   }
-   100%{
-    transform: rotate(360deg);
-   }
-
-    
-}
 
 .video{
     width: 700px;
@@ -74,11 +74,12 @@ $relleno:25px;
 $bordes:1px solid black;
 /*Anidacion*/
 
-
+head{
+    background-color: black;
+}
 
 header{
     background-color: rgb(189, 184, 184);
-    
 }
 
 /*Condicional if*/
@@ -150,7 +151,10 @@ $redes: ( /*Declaramos nuestro mapa*/
 }
 
 .img{
-    @include crearbordes(red,10px,black);
+    margin-left: auto;
+    display: inline 25% 25% 25% 25%;
+    width: 300px;
+    height: 300px;
 }
 /*FUENTES*/
 @import url('https://fonts.googleapis.com/css2? family= Heebo:wght@300 & family= Orbitron & display=swap');
@@ -195,6 +199,7 @@ html{
 }
 
 .links-style{
+    background-color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     font-weight: lighter;
@@ -219,7 +224,7 @@ html{
 }
 /*Herencia*/
 p{
-    color:orange
+    color: black;
 }
 /*Background-image*/
 .back-productos{
@@ -237,7 +242,7 @@ background-repeat: no-repeat;
 }
 
 /*Comentario css*/
-/
+
 
 
 .border{
@@ -296,4 +301,9 @@ a:hover{
 .table{
     text-align: center;
     grid-template-columns: 10% 30% 30% 30%;
+}
+
+.estilos-footer{
+    background-color: #e60b9d;
+    border: 2px; color: white;
 }

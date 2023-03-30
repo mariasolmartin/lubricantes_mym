@@ -3,18 +3,19 @@ h1{
     font-family: $font-principal;
     font-size: 4rem;
     font-weight: bold;
-    color: orange;
+    color: rgb(251, 175, 33);
     text-align: center;
 }
+
 /*Selectores*/
 /*Selectores de etiqueta*/
-h3{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: map-get($map: $estilos, $key: tfuente);
-    font-weight: bolder;
-    color: map-get($map: $estilos, $key: color);
+h3-index{
+    font-family: $font-principal;
+    background-color: orange;
+    font-size: 2rem;
     text-align: center;
 }
+
 h5{
     border: 2PX solid black;
 }

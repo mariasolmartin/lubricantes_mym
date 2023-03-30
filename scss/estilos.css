@@ -84,8 +84,10 @@ h3 {
   text-decoration: none;
 }
 
-.img-filtro {
-  width: 400px;
+.img{
+  display: flex;
+  width: 200px;
+  height: 200px;
 }
 
 /*Selector ID*/
